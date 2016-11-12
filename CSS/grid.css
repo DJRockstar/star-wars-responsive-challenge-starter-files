@@ -1,0 +1,42 @@
+* {
+	box-sizing: border-box;
+}
+
+.row{
+	max-width: 1000px;
+	margin: 0 auto;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+.col-4 {
+	float: left;
+	/*
+		Left and right padding is to
+		provide the fluid gutter of
+		20px
+	*/
+	padding-right: 1.04166%;
+	padding-left: 1.04166%;
+}
+
+/*Clearfix*/
+.row::before,
+.row::after {
+	display: table;
+	content: '';
+}
+.row::after {
+	clear:both;
+}
+
+/*For Mobile Display*/
+.col-4 {
+	width:100%;
+}
+
+@media only screen and (min-width: 640px){
+	.col-4 {
+		width: 33.3333333%;
+	}
+} 
